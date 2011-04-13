@@ -56,7 +56,7 @@
 <li>What sort of Gazetteer are we?</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+This is what we'll talk about.
 </div>
 </div>
 
@@ -69,12 +69,12 @@ This is what I'm going to tell you
 <li>Promote discovery and integration of ancient world resources</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+.
 </div>
 </div>
 
 <div class="slide">
-<h1>Contributors</h1>
+<h1>Institutions</h1>
 <ul>
 <li>Institute for the Study of the Ancient World</li>
 <li>Stoa Consortium</li>
@@ -83,7 +83,8 @@ This is what I'm going to tell you
 <li>Partner: the Digital Atlas of Roman and Medieval Civilization</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+http://www.nyu.edu/isaw, http://awmc.unc.edu, http://www.neh.gov, 
+http://darmc.harvard.edu
 </div>
 </div>
 
@@ -97,7 +98,7 @@ This is what I'm going to tell you
 <li>12 individual contributors</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+A tabular view of contributors is forthcoming.
 </div>
 </div>
 
@@ -114,17 +115,17 @@ This is what I'm going to tell you
 <li>Regnum Francorum Online</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+Largely separate from contributors.
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Our Origins</h1>
+<h1>Origins</h1>
 <img class="figure" src="images/map-directory.jpg"/>
 <p>Barrington Atlas directory</p>
 <div class="handout">
-This is what I'm going to tell you
+We begin with very little. What kind of gazetteer is this?
 </div>
 </div>
 
@@ -132,11 +133,13 @@ This is what I'm going to tell you
 <div class="slide">
 <h1>Design Principles</h1>
 <ul>
-<li>Fewest possible number of entity types</li>
+<li>Fewest number of entity types</li>
 <li>Too general is better than too specific</li>
+<li>Choose constraints carefully</li>
+<li>Scalability</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+"Worse is better"
 </div>
 </div>
 
@@ -149,13 +152,14 @@ This is what I'm going to tell you
 <li>Graph, not table storage</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+Originally, we had a Feature entity, too. Eliminated before we did mass creation
+of places.
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Affordances</h1>
+<h1>Instances</h1>
 <ul>
 <li>Unnamed places</li>
 <li>Unlocated places</li>
@@ -163,7 +167,7 @@ This is what I'm going to tell you
 <li>Places with determinable – but YAGNI – locations</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+A river has a determinable course and basin, but "you aren't going to need it".
 </div>
 
 
@@ -178,13 +182,13 @@ This is what I'm going to tell you
 <li>Other</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+Each entity has a small amount of specific attributes.
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Name Attributes</h1>
+<h1>Attributes of Names</h1>
 <ul>
 <li>Language and writing system</li>
 <li>Attested form</li>
@@ -195,7 +199,7 @@ This is what I'm going to tell you
 <li>Evidence in ancient text</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+Names are our richest entity.
 </div>
 </div>
 
@@ -204,27 +208,27 @@ This is what I'm going to tell you
 <h1>Aphrodisias</h1>
 <img class="figure" src="images/aphrodisias.jpg"/>
 <div class="handout">
-[any material that should appear in print but not on the slide]
+From http://pleiades.stoa.org/places/638753/aphrodisias.
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Aphrodisias</h1>
+<h1>Ἀφ[ρ]ο̣δισιάδος</h1>
 <img class="figure" src="images/iaph040202.jpg"/>
 <p>Inscriptions of Aphrodisias</p>
 <div class="handout">
-[any material that should appear in print but not on the slide]
+From http://insaph.kcl.ac.uk/iaph2007/iAph040202.html.
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Coria</h1>
+<h1>Evidence for Coria</h1>
 <img class="figure" src="images/coria.jpg"/>
 <p>Vindolanda Tablets Online</p>
 <div class="handout">
-[any material that should appear in print but not on the slide]
+From http://vindolanda.csad.ox.ac.uk/TVII-154.
 </div>
 </div>
 
@@ -239,7 +243,7 @@ This is what I'm going to tell you
 <li>Web clients (browsers, spiders, javascript code) interact with representations</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+Addressibility, unique and sharable identifiers.
 </div>
 </div>
 
@@ -250,10 +254,12 @@ This is what I'm going to tell you
 <li>Features are a map, not gazetteer concept</li>
 <li>Aggregation of names and locations (vs composition)</li>
 <li>Waiting for precise coordinates: enough imperfect data is useful</li>
+<li>Fine-grained resources not ideal for mapping many names in texts</li>
+<li>Are we stumbling into an an encyclopedia?</li>
 <li>Is our "Place" something else?
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+We've made a few and we'll make more.
 </div>
 </div>
 
@@ -267,7 +273,7 @@ This is what I'm going to tell you
 <li>Part/whole relationships are possible, but undeveloped</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+Is it okay to straddle types of gazetteers? Will it sow confusion?
 </div>
 </div>
 
@@ -283,7 +289,7 @@ This is what I'm going to tell you
 <li>Pleiades can still be a richer, better gazetteer</li>
 </ul>
 <div class="handout">
-This is what I'm going to tell you
+What we've talked about
 </div>
 </div>
 
