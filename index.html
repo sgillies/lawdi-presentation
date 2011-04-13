@@ -47,11 +47,11 @@
 </div>
 
 <div class="slide">
-<h1>Topics</h1>
+<h1>Overview</h1>
 <ul>
 <li>Objectives</li>
 <li>Contributors and users</li>
-<li>Resource design</li>
+<li>Entities and resource design</li>
 <li>Lessons learned</li>
 <li>What sort of Gazetteer are we?</li>
 </ul>
@@ -120,17 +120,52 @@ This is what I'm going to tell you
 
 
 <div class="slide">
-<h1>Entities</h1>
+<h1>Our Origins</h1>
+<img class="figure" src="images/map-directory.jpg"/>
+<p>Barrington Atlas directory</p>
+<div class="handout">
+This is what I'm going to tell you
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Design Principles</h1>
 <ul>
-<li>Names</li>
-<li>Locations</li>
-<li>Context ("Place")</li>
-<li>Vocabularies</li>
+<li>Fewest possible number of entity types</li>
+<li>Too general is better than too specific</li>
 </ul>
 <div class="handout">
 This is what I'm going to tell you
 </div>
 </div>
+
+
+<div class="slide">
+<h1>Entities</h1>
+<img class="figure" src="images/entities.png"/>
+<ul>
+<li>Places are a context for names, locations</li>
+<li>Graph, not table storage</li>
+</ul>
+<div class="handout">
+This is what I'm going to tell you
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Affordances</h1>
+<ul>
+<li>Unnamed places</li>
+<li>Unlocated places</li>
+<li>Fuzzy or imprecise places</li>
+<li>Places with determinable – but YAGNI – locations</li>
+</ul>
+<div class="handout">
+This is what I'm going to tell you
+</div>
+
 
 <div class="slide">
 <h1>Attributes</h1>
@@ -138,7 +173,7 @@ This is what I'm going to tell you
 <li>Metadata (Dublin Core)</li>
 <li>References</li>
 <li>Publication state</li>
-<li>Per-item revision history</li>
+<li>Revision history</li>
 <li>Attested time periods</li>
 <li>Other</li>
 </ul>
@@ -146,6 +181,7 @@ This is what I'm going to tell you
 This is what I'm going to tell you
 </div>
 </div>
+
 
 <div class="slide">
 <h1>Name Attributes</h1>
@@ -163,6 +199,7 @@ This is what I'm going to tell you
 </div>
 </div>
 
+
 <div class="slide">
 <h1>Aphrodisias</h1>
 <img class="figure" src="images/aphrodisias.jpg"/>
@@ -170,6 +207,7 @@ This is what I'm going to tell you
 [any material that should appear in print but not on the slide]
 </div>
 </div>
+
 
 <div class="slide">
 <h1>Aphrodisias</h1>
@@ -180,6 +218,7 @@ This is what I'm going to tell you
 </div>
 </div>
 
+
 <div class="slide">
 <h1>Coria</h1>
 <img class="figure" src="images/coria.jpg"/>
@@ -189,36 +228,55 @@ This is what I'm going to tell you
 </div>
 </div>
 
+
 <div class="slide">
-<h1>Design</h1>
+<h1>Resources and Representations</h1>
 <ul>
-<li>Language and writing system</li>
-<li>Attested form</li>
-<li>Transliteration</li>
-<li>Accuracy of transcription</li>
-<li>Completeness of transcription</li>
-<li>Certainty in association with a place</li>
-<li>Evidence in ancient text</li>
+<li>The web matters</li>
+<li>Give everything a URI</li>
+<li>Coriosopitum/Coria: <address>http://pleiades.stoa.org/places/89152</address></li>
+<li>Coria: <address>http://pleiades.stoa.org/places/89152/coria</address></li>
+<li>Web clients (browsers, spiders, javascript code) interact with representations</li>
 </ul>
 <div class="handout">
 This is what I'm going to tell you
 </div>
 </div>
 
+
 <div class="slide">
-<h1>Barrington Atlas</h1>
-<img class="figure" src="images/map15-pont-du-gard.jpg"/>
+<h1>Missteps</h1>
+<ul>
+<li>Features are a map, not gazetteer concept</li>
+<li>Aggregation of names and locations (vs composition)</li>
+<li>Waiting for precise coordinates: enough imperfect data is useful</li>
+<li>Is our "Place" something else?
+</ul>
 <div class="handout">
-[any material that should appear in print but not on the slide]
+This is what I'm going to tell you
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Summary</h1>
+<h1>What kind of Gazetteer?</h1>
+<ul>
+<li>"Place" context yields properties of a historical gazetteer</li>
+<li>Some users want properties of an richer, encyclopedic gazetteer</li>
+<li>Network relationships between places are interesting to users</li>
+<li>Part/whole relationships are possible, but undeveloped</li>
+</ul>
+<div class="handout">
+This is what I'm going to tell you
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Conclusion</h1>
 <ul>
 <li>Pleiades remains relevant</li>
-<li>M institutions, N individuals</li>
+<li>12 institutions, 12 individuals</li>
 <li>Guided by architecture of the web</li>
 <li>Embrace being a historical gazetteer</li>
 <li>Keep it simple, publish early and often</li>
@@ -226,21 +284,6 @@ This is what I'm going to tell you
 </ul>
 <div class="handout">
 This is what I'm going to tell you
-</div>
-</div>
-
-
-<div class="slide">
-<h1>[slide title]</h1>
-<ul>
-<li>[point one]</li>
-<li>[point two]</li>
-<li>[point three]</li>
-<li>[point four]</li>
-<li>[point five]</li>
-</ul>
-<div class="handout">
-[any material that should appear in print but not on the slide]
 </div>
 </div>
 
