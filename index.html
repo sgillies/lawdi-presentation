@@ -31,8 +31,8 @@
 <div id="currentSlide"><!-- DO NOT EDIT --></div>
 <div id="header"></div>
 <div id="footer">
-<h1>AAG Space-Time GIScience Research Symposium – 13 April 2011</h1>
-<h2>Pleiades: an un-GIS for ancient geography</h2>
+<h1>Location - Date</h1>
+<h2>Title</h2>
 </div>
 
 </div>
@@ -41,19 +41,17 @@
 <div class="presentation">
 
 <div class="slide">
-<h1>Pleiades: an un-GIS for Ancient Geography</h1>
-<h3>Sean Gillies</h3>
+<h1>Title</h1>
+<h3>Author</h3>
 <h4>Institute for the Study of the Ancient World, New York University</h4>
 </div>
 
 <div class="slide">
 <h1>Overview</h1>
 <ul>
-<li>Objectives</li>
-<li>Contributors and users</li>
-<li>Entities and resource design</li>
-<li>Lessons learned</li>
-<li>What sort of Gazetteer are we?</li>
+<li>What?</li>
+<li>Why?</li>
+<li>How?</li>
 </ul>
 <div class="handout">
 This is what we'll talk about.
@@ -61,232 +59,11 @@ This is what we'll talk about.
 </div>
 
 <div class="slide">
-<h1>Objectives</h1>
-<ul>
-<li>Continue the work of the Classical Atlas Project</li>
-<li>Inventory ancient place names and related locations</li>
-<li>Make these resources widely available and editable</li>
-<li>Promote discovery and integration of ancient world resources</li>
-</ul>
-<div class="handout">
-.
-</div>
-</div>
-
-<div class="slide">
-<h1>Institutions</h1>
-<ul>
-<li>Institute for the Study of the Ancient World</li>
-<li>Stoa Consortium</li>
-<li>Ancient World Mapping Center</li>
-<li>Funding: the National Endowment for the Humanities</li>
-<li>Partner: the Digital Atlas of Roman and Medieval Civilization</li>
-</ul>
-<div class="handout">
-http://www.nyu.edu/isaw, http://awmc.unc.edu, http://www.neh.gov, 
-http://darmc.harvard.edu
-</div>
-</div>
-
-<div class="slide">
-<h1>Contributors</h1>
-<ul>
-<li>Senior Editors: Roger Bagnall (NYU) and Richard Talbert (UNC)</li>
-<li>Managing Editors: Tom Elliott (NYU) and Brian Turner (UNC)</li>
-<li>Associate Editor: Michael McCormick (Harvard)</li>
-<li>Chief Engineer: Sean Gillies (NYU)</li>
-<li>12 individual contributors</li>
-</ul>
-<div class="handout">
-A tabular view of contributors is forthcoming.
-</div>
-</div>
-
-<div class="slide">
-<h1>Users</h1>
-<ul>
-<li>Inscriptions of Roman Cyrenaica (KCL-CCH)</li>
-<li>Epigraphische Datenbank Heidelberg</li>
-<li>Nomisma.org (ANS)</li>
-<li>Portable Antiquities Scheme (UK)</li>
-<li>Google Ancient Places</li>
-<li>Arachne (DAI)</li>
-<li>Perseus Digital Library</li>
-<li>Regnum Francorum Online</li>
-</ul>
-<div class="handout">
-Largely separate from contributors.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Origins</h1>
-<img class="figure" src="images/map-directory.jpg"/>
-<p>Barrington Atlas directory</p>
-<div class="handout">
-We begin with very little. What kind of gazetteer is this?
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Design Principles</h1>
-<ul>
-<li>Fewest number of entity types</li>
-<li>Too general is better than too specific</li>
-<li>Choose constraints carefully</li>
-<li>Scalability</li>
-</ul>
-<div class="handout">
-"Worse is better"
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Entities</h1>
-<img class="figure" src="images/entities.png"/>
-<ul>
-<li>Places are a context for names, locations</li>
-<li>Graph, not table storage</li>
-</ul>
-<div class="handout">
-Originally, we had a Feature entity, too. Eliminated before we did mass creation
-of places.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Instances</h1>
-<ul>
-<li>Unnamed places</li>
-<li>Unlocated places</li>
-<li>Fuzzy or imprecise places</li>
-<li>Places with determinable – but YAGNI – locations</li>
-</ul>
-<div class="handout">
-A river has a determinable course and basin, but "you aren't going to need it".
-</div>
-
-
-<div class="slide">
-<h1>Attributes</h1>
-<ul>
-<li>Metadata (Dublin Core)</li>
-<li>References</li>
-<li>Publication state</li>
-<li>Revision history</li>
-<li>Attested time periods</li>
-<li>Other</li>
-</ul>
-<div class="handout">
-Each entity has a small amount of specific attributes.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Attributes of Names</h1>
-<ul>
-<li>Language and writing system</li>
-<li>Attested form</li>
-<li>Transliteration</li>
-<li>Accuracy of transcription</li>
-<li>Completeness of transcription</li>
-<li>Certainty in association with a place</li>
-<li>Evidence in ancient text</li>
-</ul>
-<div class="handout">
-Names are our richest entity.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Aphrodisias</h1>
-<img class="figure" src="images/aphrodisias.jpg"/>
-<div class="handout">
-From http://pleiades.stoa.org/places/638753/aphrodisias.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Ἀφ[ρ]ο̣δισιάδος</h1>
-<img class="figure" src="images/iaph040202.jpg"/>
-<p>Inscriptions of Aphrodisias</p>
-<div class="handout">
-From http://insaph.kcl.ac.uk/iaph2007/iAph040202.html.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Evidence for Coria</h1>
-<img class="figure" src="images/coria.jpg"/>
-<p>Vindolanda Tablets Online</p>
-<div class="handout">
-From http://vindolanda.csad.ox.ac.uk/TVII-154.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Resources and Representations</h1>
-<ul>
-<li>The web matters</li>
-<li>Give everything a URI</li>
-<li>Coriosopitum/Coria: <address>http://pleiades.stoa.org/places/89152</address></li>
-<li>Coria: <address>http://pleiades.stoa.org/places/89152/coria</address></li>
-<li>Web clients (browsers, spiders, javascript code) interact with representations</li>
-</ul>
-<div class="handout">
-Addressibility, unique and sharable identifiers.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Missteps</h1>
-<ul>
-<li>Features are a map, not gazetteer concept</li>
-<li>Aggregation of names and locations (vs composition)</li>
-<li>Waiting for precise coordinates: enough imperfect data is useful</li>
-<li>Fine-grained resources not ideal for mapping many names in texts</li>
-<li>Are we stumbling into an an encyclopedia?</li>
-<li>Is our "Place" something else?
-</ul>
-<div class="handout">
-We've made a few and we'll make more.
-</div>
-</div>
-
-
-<div class="slide">
-<h1>What kind of Gazetteer?</h1>
-<ul>
-<li>"Place" context yields properties of a historical gazetteer</li>
-<li>Some users want properties of an richer, encyclopedic gazetteer</li>
-<li>Network relationships between places are interesting to users</li>
-<li>Part/whole relationships are possible, but undeveloped</li>
-</ul>
-<div class="handout">
-Is it okay to straddle types of gazetteers? Will it sow confusion?
-</div>
-</div>
-
-
-<div class="slide">
 <h1>Conclusion</h1>
 <ul>
-<li>Pleiades remains relevant</li>
-<li>12 institutions, 12 individuals</li>
-<li>Be guided by architecture of the web</li>
-<li>Embrace being a historical gazetteer</li>
-<li>Keep it simple, publish early and often</li>
-<li>Pleiades can still be a richer, better gazetteer</li>
+<li>This</li>
+<li>That</li>
+<li>The Other</li>
 </ul>
 <div class="handout">
 What we've talked about
