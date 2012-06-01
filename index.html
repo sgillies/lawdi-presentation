@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>Pleiades: an un-GIS for ancient geography</title>
+<title>Crafting Linked Data</title>
 <!-- metadata -->
 <meta name="generator" content="S5" />
 <meta name="version" content="S5 1.1" />
@@ -31,8 +31,8 @@
 <div id="currentSlide"><!-- DO NOT EDIT --></div>
 <div id="header"></div>
 <div id="footer">
-<h1>Location - Date</h1>
-<h2>Title</h2>
+<h1>Linked Ancient World Data Institute - 1 June 2012</h1>
+<h2></h2>
 </div>
 
 </div>
@@ -41,17 +41,235 @@
 <div class="presentation">
 
 <div class="slide">
-<h1>Title</h1>
-<h3>Author</h3>
+<h1>Crafting Linked Data</h1>
+<h3>Sean Gillies</h3>
 <h4>Institute for the Study of the Ancient World, New York University</h4>
 </div>
 
 <div class="slide">
 <h1>Overview</h1>
+<br>
 <ul>
-<li>What?</li>
-<li>Why?</li>
-<li>How?</li>
+<li>The principles of Linked Data, again.</li>
+<li>How to profit from HTTP.</li>
+<li>The care and feeding of linked data.</li>
+</ul>
+<div class="handout">
+This is what we'll talk about.
+</div>
+</div>
+
+<div class="slide">
+<h1>Principles of Linked Data</h1>
+<ol>
+<li>Use URIs as names for things.</li>
+<li>Use HTTP URIs, so that people can look up those names.</li>
+<li>When someone looks up a URI, provide useful information, using the standards (RDF, SPARQL).</li>
+<li>Include links to other URIs, so that they can discover more things.</li>
+</ol>
+<p>Tim Berners-Lee. Linked Data - Design Issues, 2006. <a href="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a>.</p>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>The Sweet Spot?</h1>
+<br>
+<p class="centered"><img src="images/linked-data-venn.png"></p>
+</div>
+
+<div class="slide">
+<h1>1. Name things with URIs</h1>
+<br>
+<blockquote>
+A common misunderstanding of URIs is that they are only used to refer to accessible resources. The URI itself only provides identification; access to the resource is neither guaranteed nor implied by the presence of a URI.  Instead, any operation associated with a URI reference is defined by the protocol element, data format attribute, or natural language text in which it appears.
+</blockquote>
+<p>RFC 3986 - <a href="http://tools.ietf.org/html/rfc3986">http://tools.ietf.org/html/rfc3986</a></p>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>1. Name things with URIs (cont'd)</h1>
+<br>
+<blockquote>
+URI references in information retrieval systems are designed to be
+late-binding: the result of an access is generally determined when it
+is accessed and may vary over time ... what is being identified is not some specific result that was
+obtained in the past, but rather some characteristic that is expected
+to be true for future results.
+</blockquote>
+<p>Even when there is a date in the URI: <a href="http://www.nytimes.com/2012/05/31/nyregion/bloomberg-plans-a-ban-on-large-sugared-drinks.html">http://www.nytimes.com/2012/05/31/nyregion/bloomberg-plans-a-ban-on-large-sugared-drinks.html</a>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>Generic URI Syntax</h1>
+<br>
+<pre>
+URI       = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
+
+hier-part = "//" authority path-abempty
+          / path-absolute
+          / path-rootless
+          / path-empty
+</pre>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>URI Syntax Examples</h1>
+<br>
+<pre>
+foo://example.com:8042/over/there?name=ferret#nose
+\_/   \______________/\_________/ \_________/ \__/
+ |           |            |            |        |
+scheme     authority    path        query   fragment
+ |   _____________________|__
+/ \ /                        \
+urn:example:animal:ferret:nose
+</pre>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>2. Use HTTP URIs</h1>
+<br>
+<ul>
+<li>HTTP is a protocol for interacting with things.</li>
+<li>Is the thing identified by the URI accessible? What is it?</li>
+<li>If it is an HTTP URI, you can find out from any web browser.</li>
+<li>DNS resolution and TCP are ubiquitous.</li>
+<li>http:// means batteries included.</li>
+</ul>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>2. Use HTTP URIs (cont'd)</h1>
+<br>
+<ul>
+<li>HTTP provides verbs: GET, PUT, DELETE, POST, &amp;c.</li>
+<li>Authority segment of an HTTP URI provides provenance.</li>
+<li>HTTP URIs can be shared by non-experts.</li>
+<li>Can be used in innovative ways: <a href="http://maps.google.com/maps?q=http://pleiades.stoa.org/places/148107/kml">http://maps.google.com/maps?q=http://pleiades.stoa.org/places/148107/kml</a></li>
+</ul>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>3. Provide Useful Information</h1>
+<br>
+<ul>
+<li>Return RDF to those who ask for it.</li>
+<li>Otherwise return HTML with links to RDF.</li>
+<li>Autodiscovery patterns are useful.</li>
+<li>KML is useful for geographic applications.</li>
+<li>JSON is useful for web and mobile applications.</li>
+</ul>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>4. Make Links</h1>
+<br>
+<ul>
+<li>Means of citation.</li>
+<li>Allows people and agents to follow their noses to more things.</li>
+<li>Indicates trust in other projects.</li>
+</ul>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>The Goals</h1>
+<br>
+<p>By following these principles we aim to produce a web of data not limited by our own personal or
+institutional resources, and make possible a world of new applications not limited by our
+own imaginations.</p>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>The Goals (cont'd)</h1>
+<p class="centered"><img width="640" src="images/lod-datasets_2011-09-19.png"></a>
+<p stye="font-size:small;">Linking Open Data cloud diagram, by Richard Cyganiak and Anja Jentzsch. <a href="http://lod-cloud.net/">http://lod-cloud.net/</a></p>
+</div>
+
+<div class="slide">
+<h1>The Goals (cont'd)</h1>
+<br>
+<p>We also aim to increase access to our own data because</p>
+<ul>
+<li>Access can lead to increase in data coverage and quality.</li>
+<li>"Preservation is just access ... in the future." – David Brunton (via <a href="http://inkdroid.org/journal/about/">Ed Summers</a>)</li>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>Speaking of the future...</h1>
+<br>
+<p>How do we make sure that our linked data is still
+useful in 1 year, 5 years, 20 years?</p>
+<p>Practicing good URI hygiene is a big part of the answer.</p>
+<div class="handout">
+The four principles of linked data.
+</div>
+</div>
+
+<div class="slide">
+<h1>Let's Talk About URI Hygiene</h1>
+<p class="centered"><img src="images/576px-OCD_handwash.jpg"></p>
+</div>
+
+<div class="slide">
+<h1>Hygieia, daughter of Asclepius</h1>
+<p class="centered"><img src="images/255px-Hygea,_copia_romana_da_originale_greco_del_III_sec._ac.JPG"></p>
+<p>By I. Sailko, <a href="http://en.wikipedia.org/wiki/File:Hygea,_copia_romana_da_originale_greco_del_III_sec._ac.JPG">http://en.wikipedia.org/wiki/File:Hygea,_copia_romana_da_originale_greco_del_III_sec._ac.JPG</a></p>
+</div>
+
+<div class="slide">
+<h1>Cool URIs Don't Change</h1>
+<br>
+<ul>
+<li>Buffer your things from platform and software changes.</li>
+<li>"things.example.com" is better than "tomcat.example.com".</li>
+<li>Eliminate "/cgi-bin/".</li>
+<li>"/things/1" is better than "/things/1.aspx".</li>
+<li>The less unnecessary hierarchy, the better.</li>
+</ul>
+<div class="handout">
+This is what we'll talk about.
+</div>
+</div>
+
+<div class="slide">
+<h1>Follow Links in Content</h1>
+<br>
+<ul>
+<li>Follow rel="alternate" links to other formats (XML, JSON, &amp;c).</li>
+<li>Avoid constructing URIs by appending ".xml" or ".json".</li>
+<li>Teach other consumers of your data to follow the links.</li>
 </ul>
 <div class="handout">
 This is what we'll talk about.
@@ -61,12 +279,12 @@ This is what we'll talk about.
 <div class="slide">
 <h1>Conclusion</h1>
 <ul>
-<li>This</li>
-<li>That</li>
-<li>The Other</li>
+<li>Linked Data has 4 simple principles.</li>
+<li>HTTP and http:// URIs are good for you and your data.</li>
+<li>Lightweight policy and good URI hygiene can prevent many problems.</li>
 </ul>
 <div class="handout">
-What we've talked about
+This is what we've talked about.
 </div>
 </div>
 
